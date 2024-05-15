@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Base.Theme.ChatApp" parent="android:Theme.Material.Light.NoActionBar" >
-        
+    <style name="Base.Theme.ChatApp" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/blue</item>
+
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
     </style>
-    
-    <style name="Theme.ChatApp" parent="Base.Theme.ChatApp"/>
+
+    <style name="Theme.ChatApp" parent="Base.Theme.ChatApp" />
+
+    <style name="Theme.MainActivity" parent="Base.Theme.ChatApp">
+        <item name="android:windowBackground">@drawable/launch_window_background</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:colorPrimary">@color/blue</item>
+    </style>
 
 </resources>
